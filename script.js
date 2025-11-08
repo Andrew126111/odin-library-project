@@ -2,11 +2,16 @@ const library = [{ title: "1984", author: "George Orwell" },
 { title: "Harry Potter", author: "J.K. Rowling" },
 { title: "The Hobbit", author: "J.R.R. Tolkien" }];
 
-function Book(title, author){
-    this.id = crypto.randomUUID();
-    this.title = title;
-    this.author = author;
-}
+class Book {
+    constructor(title, author) {
+      this.id = crypto.randomUUID();
+      this.title = title;
+      this.author = author;
+    }
+  }
+  
+  
+
 function addBooktoLibrary(title, author){
     const newBook = new Book(title,author);
     library.push(newBook);
